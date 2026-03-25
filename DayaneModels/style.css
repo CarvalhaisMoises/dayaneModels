@@ -1,0 +1,398 @@
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd; /* fundo quase branco */
+    color: #222; /* texto escuro */
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #ffffff; /* clean e elegante */
+    color: #000000;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* ===== NAV ===== */
+nav {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    color: #000000;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') no-repeat center/cover;
+    height: 300px;
+    border-radius: 0 0 20px 20px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* ===== CARDS DE SERVIÇOS ===== */
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* ===== BOTÃO PRINCIPAL ===== */
+button {
+    background: linear-gradient(90deg, #000000, #333333);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* ===== FORMULÁRIO DE NEWSLETTER ===== */
+form p {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+form input[type="email"] {
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    width: 250px;
+    margin-right: 10px;
+}
+
+form input[type="submit"] {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+/* ===== FORMULÁRIO DE AGENDAMENTO ===== */
+#formulario {
+    display: none;
+    margin-top: 30px;
+    animation: aparecer 0.5s ease;
+}
+
+.form-section {
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 20px auto 0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.form-section h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-section input,
+.form-section select,
+.form-section button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-section button {
+    background: linear-gradient(90deg, #000000, #333333);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-section button:hover {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== SVG / BOTÕES EXTRA ===== */
+.button svg {
+    width: 32px;
+    height: 32px;
+    fill: #000000;
+    transition: 0.3s;
+    vertical-align: middle;
+}
+
+.button:hover svg {
+    fill: #333333;
+    transform: scale(1.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+}
+
+.topo {
+    background: linear-gradient(135deg, #fdfaf6, #2c2c2c);
+    padding: 20px 0;
+    border-bottom: 1px solid #d8bcbc;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    color: #222;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    background-color: #e2dbaf;
+    color: rgb(0, 0, 0);
+}
+
+.rodape {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+/* Configuração de Fontes e Espaçamento de Letras */
+.titulo-serifado {
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+}
+
+/* Faz a imagem preencher o fundo sem esticar */
+.imagem-fundo {
+    object-fit: cover;
+}
+
+/* Camada de Gradiente (Overlay) */
+.camada-escura {
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0.6) 0%, 
+        rgba(0,0,0,0.3) 50%, 
+        rgba(0,0,0,0.8) 100%);
+    z-index: 1;
+}
+
+/* Garante que o texto fique acima do gradiente */
+.carousel-caption {
+    z-index: 2;
+}
+
+/* Linhas finas ao lado da legenda */
+.linha-branca {
+    width: 40px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+/* Espaçamento entre letras para toque premium */
+.tracking-wide { letter-spacing: 0.35em; }
+.tracking-wider { letter-spacing: 0.25em; }
+.tracking-widest { letter-spacing: 0.4em; }
+
+/* Estilo das Setas Customizadas */
+.seta-customizada {
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.seta-customizada:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Animação suave ao trocar slide */
+.carousel-item.active .carousel-caption {
+    animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* --- Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: aparecer 0.3s ease;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-content h3 {
+    color: #6b0f1a;
+    margin-bottom: 10px;
+}
+
+.fechar {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Keyframes */
+@keyframes aparecer {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

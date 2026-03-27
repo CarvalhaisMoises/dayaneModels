@@ -1,0 +1,593 @@
+/* RESET E FONTES */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+/* NAVBAR GLASSMORPHISM */
+.barra-navegacao {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.2rem 0;
+    z-index: 1050;
+}
+
+.logotipo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+.logotipo-italico { font-weight: 300; font-style: italic; }
+
+.link-menu {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* CARROSSEL - AJUSTE DE CENTRALIZAÇÃO TOTAL */
+.objeto-capa {
+    object-fit: cover;
+}
+
+.camada-gradiente {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0.6) 0%, 
+        rgba(0,0,0,0.3) 50%, 
+        rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+/* Esta classe garante que o texto não fique torto */
+.conteudo-centralizado-total {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+    text-align: center;
+    padding-top: 80px;       /* Compensa a altura da Navbar */
+    z-index: 5;
+}
+
+/* TIPOGRAFIA DO CARROSSEL */
+.texto-etiqueta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2rem;
+}
+
+.titulo-luxo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0;
+}
+
+.fonte-italica { font-style: italic; }
+
+.divisor-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.linha-fina {
+    width: 60px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.texto-legenda {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+}
+
+/* BOTÃO */
+.botao-luxo {
+    margin-top: 3.5rem;
+    padding: 1rem 3rem;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.botao-luxo:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* SETAS LATERAIS */
+.caixa-seta {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.carousel-control-prev, .carousel-control-next { opacity: 1; width: 8%; }
+
+/* INDICADORES (DOTS) */
+.barra-indicadores {
+    bottom: 40px;
+}
+
+.barra-indicadores [data-bs-target] {
+    width: 12px;
+    height: 5px;
+    background-color: rgba(255,255,255,0.3);
+    border: none;
+    transition: 0.4s;
+}
+
+.barra-indicadores .active {
+    width: 45px;
+    background-color: #fff;
+}
+
+/* ANIMAÇÃO SUAVE */
+.carousel-item.active .conteudo-centralizado-total {
+    animation: fadeInContent 1.5s ease-out;
+}
+
+@keyframes fadeInContent {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .barra-navegacao { background-color: #000; }
+    .titulo-luxo { font-size: 2.8rem; }
+    .linha-fina { width: 30px; }
+}
+
+/* --- SEÇÃO DE SERVIÇOS --- */
+.bg-preto-profundo {
+    background-color: #0a0a0a;
+}
+
+.titulo-secao {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+}
+
+.linha-servico {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Imagem que aparece no fundo no hover */
+.fundo-imagem-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+/* Overlay escuro sobre a imagem do hover */
+.fundo-imagem-hover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.conteudo-servico {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2.5rem 0;
+    transition: all 0.4s ease;
+}
+
+.numero-servico {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.1);
+    width: 80px;
+    transition: color 0.4s ease;
+}
+
+.info-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.nome-servico {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+    transition: all 0.4s ease;
+}
+
+.descricao-servico {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 500px;
+    margin-top: 10px;
+    /* Efeito de sumir/aparecer como no React */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.tags-detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-servico {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+}
+
+/* --- EFEITOS DE HOVER (Mágica do CSS) --- */
+.linha-servico:hover .fundo-imagem-hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.linha-servico:hover .numero-servico {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.linha-servico:hover .descricao-servico {
+    max-height: 100px;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+.linha-servico:hover .conteudo-servico {
+    padding-left: 20px; /* Pequeno deslize para a direita */
+}
+
+/* Ajuste Responsivo */
+@media (max-width: 768px) {
+    .conteudo-servico {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .tags-detalhes {
+        order: 3;
+        margin-top: 10px;
+    }
+    .descricao-servico {
+        max-height: none; /* Sempre visível no celular para facilitar leitura */
+        opacity: 1;
+    }
+}
+
+/* --- SEÇÃO SOBRE --- */
+.bg-sobre-dark {
+    background-color: #0d0d0d; /* Um pouco mais claro que o preto puro para dar profundidade */
+}
+
+.espacamento-paragrafo p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+/* Estilo dos Valores */
+.numero-valor {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.2);
+    line-height: 1;
+    margin-top: -5px;
+}
+
+.titulo-valor {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.desc-valor {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Animações de Scroll (Simulando Framer Motion) */
+.slide-up {
+    animation: slideUpFade 1.2s ease forwards;
+}
+
+.slide-up-delay {
+    animation: slideUpFade 1.2s ease 0.3s forwards;
+    opacity: 0; /* Começa invisível para o delay funcionar */
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes Mobile */
+@media (max-width: 991px) {
+    .item-valor {
+        margin-bottom: 2.5rem !important;
+    }
+    .titulo-secao {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- SEÇÃO EQUIPE --- */
+.card-membro {
+    background: transparent;
+    transition: transform 0.4s ease;
+}
+
+.foto-container {
+    position: relative;
+    aspect-ratio: 3/4; /* Formato retrato elegante */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.foto-membro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%); /* Leve toque artístico */
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-membro {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bio-curta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+/* Efeito Hover no Card */
+.card-membro:hover .foto-membro {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.card-membro:hover .overlay-membro {
+    opacity: 1;
+}
+
+.card-membro:hover .bio-curta {
+    transform: translateY(0);
+}
+
+/* Textos da Equipe */
+.nome-membro {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.cargo-membro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Delays extras para animação de entrada */
+.slide-up-delay-2 {
+    animation: slideUpFade 1.2s ease 0.5s forwards;
+    opacity: 0;
+}
+
+/* Ajuste Responsivo */
+@media (max-width: 576px) {
+    .foto-container {
+        aspect-ratio: 1/1; /* Quadrado no celular para poupar espaço */
+    }
+}
+
+/* --- SEÇÃO EQUIPE --- */
+/* --- SEÇÃO EQUIPE MINIMALISTA --- */
+.avatar-circular {
+    width: 120px;
+    height: 120px;
+    background-color: #1a1a1a; /* Fundo escuro sutil */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.iniciais-avatar {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.5s ease;
+}
+
+.nome-membro-minimal {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.cargo-membro-minimal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.equipe-item:hover .avatar-circular {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.equipe-item:hover .iniciais-avatar {
+    color: #000;
+}
+
+/* Delays para animação de subida */
+.slide-up-delay-2 {
+    animation: slideUpFade 1.2s ease 0.5s forwards;
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .avatar-circular {
+        width: 100px;
+        height: 100px;
+    }
+    .nome-membro-minimal {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- FOOTER --- */
+.titulo-footer {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.link-footer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-footer:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.link-social {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.link-social:hover {
+    border-color: #fff;
+}
+
+/* Suavizar a transição do scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ajuste fino para o espaçamento do botão no footer */
+footer .botao-luxo {
+    margin-top: 0;
+    padding: 0.8rem 2rem;
+    font-size: 0.65rem;
+}
+
+@media (max-width: 991px) {
+    footer {
+        text-align: left !important;
+    }
+    .text-lg-end {
+        text-align: left !important;
+    }
+}
